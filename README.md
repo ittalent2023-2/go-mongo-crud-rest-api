@@ -55,7 +55,7 @@ docker run --name mongodb -d -p 27017:27017 --network go-api-net mongo
 ```
 Finalmente execute a app (esse comando não irá funcionar, pois é sua tarefa criar a imagem dessa APP):
 ```sh
-docker run --name go-api-mongo -d -p 9080:9080 -e MONGO_DB_HOST="mongodb" --network go-api-net matheusmc/go-api-mongo
+docker run --name go-api-mongo -d -p 9080:9080 -e MONGO_DB_HOST="mongodb" -v mongodb:/data/db --network go-api-net matheusmc/go-api-mongo
 ```
 
 ## Detalhes a serem observados:
